@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="colorPrimary">#4285F4</color>
+    <color name="colorPrimaryDark">#3367D6</color>
+    <color name="colorAccent">#FFC400</color>
+
+    <color name="colorNavbar">#FFFFFF</color>
+    <color name="colorPrimaryLight">#00C853</color>
+    <color name="background">#535353</color>
+
+    <color name="colornv">#F3FF2170</color>
+
+    <color name="txtPrincipal">#271903</color>
+    <color name="trans">#005b5b5b</color>
+
+    <color name="bgNavbar">#1D1D1D</color>
+    <color name="black">#000000</color>
+    <color name="colorCard">#ececec</color>
+    <color name="backgroundTransparent">#00181717</color>
+
+    <color name="footer">#F1F1F1</color>
+    <color name="white">#FFFFFF</color>
+    <color name="btnBgBack">#58393939</color>
+
+    <color name="bgActivity">#0D1726</color>
+
+
+    <!--
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>-->
+
+
+        <color name="pink">#FF4081</color>
+        <color name="indigo">#3F51B5</color>
+        <color name="lime">#CDDC39</color>
+</resources>

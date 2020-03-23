@@ -1,0 +1,12 @@
+[23-Jan-2020 00:40:51 UTC] PHP Warning:  session_unset() expects exactly 0 parameters, 1 given in /home2/pymespac/Login.pymespace.com.mx/php/CerrarSesion.php on line 3
+[27-Jan-2020 23:43:15 UTC] PHP Warning:  session_unset() expects exactly 0 parameters, 1 given in /home2/pymespac/Login.pymespace.com.mx/php/CerrarSesion.php on line 3
+[12-Feb-2020 20:01:11 UTC] PHP Warning:  session_unset() expects exactly 0 parameters, 1 given in /home2/pymespac/Login.pymespace.com.mx/php/CerrarSesion.php on line 3
+[12-Feb-2020 22:35:22 UTC] PHP Warning:  session_unset() expects exactly 0 parameters, 1 given in /home2/pymespac/Login.pymespace.com.mx/php/CerrarSesion.php on line 3
+[12-Feb-2020 22:41:57 UTC] PHP Warning:  session_unset() expects exactly 0 parameters, 1 given in /home2/pymespac/Login.pymespace.com.mx/php/CerrarSesion.php on line 3
+[12-Feb-2020 23:19:12 UTC] PHP Warning:  session_unset() expects exactly 0 parameters, 1 given in /home2/pymespac/Login.pymespace.com.mx/php/CerrarSesion.php on line 3
+[15-Feb-2020 21:49:13 UTC] PHP Warning:  session_unset() expects exactly 0 parameters, 1 given in /home2/pymespac/Login.pymespace.com.mx/php/CerrarSesion.php on line 3
+[15-Feb-2020 21:50:08 UTC] PHP Warning:  session_unset() expects exactly 0 parameters, 1 given in /home2/pymespac/Login.pymespace.com.mx/php/CerrarSesion.php on line 3
+[15-Feb-2020 21:50:59 UTC] PHP Warning:  session_unset() expects exactly 0 parameters, 1 given in /home2/pymespac/Login.pymespace.com.mx/php/CerrarSesion.php on line 3
+[15-Feb-2020 22:29:32 UTC] PHP Warning:  session_unset() expects exactly 0 parameters, 1 given in /home2/pymespac/Login.pymespace.com.mx/php/CerrarSesion.php on line 3
+[29-Feb-2020 14:00:15 America/Mexico_City] PHP Warning:  session_unset() expects exactly 0 parameters, 1 given in /home2/pymespac/Login.pymespace.com.mx/php/CerrarSesion.php on line 3
+[29-Feb-2020 14:05:11 America/Mexico_City] PHP Warning:  session_unset() expects exactly 0 parameters, 1 given in /home2/pymespac/Login.pymespace.com.mx/php/CerrarSesion.php on line 3

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:paddingRight="25dp"
+    android:paddingLeft="25dp"
+    android:paddingTop="20dp"
+    android:orientation="vertical">
+
+    <!-- Seleccion de foto de portada -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/TextAppearance.AppCompat.Medium"
+        android:textStyle="bold"
+        android:text="Selecciona una foto de portada"/>
+
+    <LinearLayout
+        android:id="@+id/layoutStorage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        tools:visibility="visible"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="15dp">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/buttonCamera2"
+            android:layout_width="wrap_content"
+            android:layout_height="56dp"
+            style="@style/Widget.Guiaz.TextButton"
+            android:onClick="uploadData"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Button"
+            android:text="Cargar foto" />
+    </LinearLayout>
+
+</LinearLayout>

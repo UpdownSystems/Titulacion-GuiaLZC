@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "499302145560",
+    "firebase_url": "https://pyme-space.firebaseio.com",
+    "project_id": "pyme-space",
+    "storage_bucket": "pyme-space.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:499302145560:android:1dde85dc4fe59eed062d6d",
+        "android_client_info": {
+          "package_name": "com.example.guiazlzc"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "499302145560-glp9q6mj32ojtpr06qifq40stiv94m44.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBNS87dQDOew4q45-UrzZDPwo-qfiu4nz4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "499302145560-glp9q6mj32ojtpr06qifq40stiv94m44.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

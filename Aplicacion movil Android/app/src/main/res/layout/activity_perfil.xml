@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Echo por: Updown Systems
+    Programado por: Jorge Luis Perez Medina
+-->
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        layout="@layout/toolbar_misc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <RelativeLayout
+        android:id="@+id/headerPerfil"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@color/colorPrimary"
+        android:layout_marginTop="55dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/imgUser"
+                android:layout_width="wrap_content"
+                android:layout_height="70dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp"
+                android:adjustViewBounds="true"
+                android:backgroundTint="@color/background"
+                android:scaleType="centerInside"
+                app:srcCompat="@drawable/man" />
+
+            <TextView
+                android:id="@+id/txtNameNegocio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/imgUser"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:text="Nombre negocio"
+                android:textColor="@color/footer"
+                android:textSize="25sp"
+                app:fontFamily="@font/product_sans" />
+
+            <TextView
+                android:id="@+id/txtCategoria"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txtNameNegocio"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="3dp"
+                android:layout_marginBottom="15dp"
+                android:text="Categoria"
+                android:textColor="@color/footer"
+                android:textSize="15sp" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingEditarPerfil"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_anchor="@id/headerPerfil"
+        app:layout_anchorGravity="bottom|end"
+        android:layout_marginRight="15dp"
+        app:srcCompat="@drawable/ic_edit_black_24dp" />
+
+
+    <include
+        layout="@layout/content_info_perfil"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="208dp"/>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Echo por: Updown Systems
+    Programado por: Jorge Luis Perez Medina
+-->
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    android:id="@+id/coordinatorLayout"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/aaa">
+
+        <include
+            layout="@layout/toolbar_perfil"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <!--<include layout="@layout/include_upload_photo"
+            android:id="@+id/tuculo"
+            android:layout_marginTop="57dp"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"/>-->
+
+        <include
+            layout="@layout/todo_post"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="56dp" />
+    </RelativeLayout>
+
+    </ScrollView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabSubmitPost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|bottom"
+        android:layout_margin="16dp"
+        android:src="@drawable/ic_check_white_24dp"/>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

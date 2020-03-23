@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Echo por: Updown Systems
+    Programado por: Jorge Luis Perez Medina
+-->
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <TextView
+                android:id="@+id/textView10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:paddingBottom="25dp"
+                android:layout_marginTop="5dp"
+                android:text="Información personal"
+                android:textColor="@color/background"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                style="@style/TextAppearance.AppCompat.Medium"
+                app:fontFamily="@font/product_sans" />
+
+            <TextView
+                android:id="@+id/textView27"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="@dimen/pLeft"
+                android:drawableLeft="@drawable/ic_two_tone_account_circle_24px"
+                android:text="Nombre Encargado"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:fontFamily="@font/product_sans" />
+
+            <TextView
+                android:id="@+id/setNameJefe"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="20dp"
+                android:paddingLeft="@dimen/pLeftSub"
+                android:text=""
+                android:textColor="@color/background"
+                android:textSize="16sp"
+                app:fontFamily="sans-serif" />
+
+            <TextView
+                android:id="@+id/textView18"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/ic_two_tone_store_mall_directory_24px"
+                android:drawablePadding="@dimen/pLeft"
+                android:text="Nombre del Negocio"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:fontFamily="@font/product_sans" />
+
+            <TextView
+                android:id="@+id/setNameNegocio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="20dp"
+                android:paddingLeft="@dimen/pLeftSub"
+                android:text=""
+                android:textColor="@color/background"
+                android:textSize="16sp"
+                app:fontFamily="sans-serif" />
+
+
+            <TextView
+                android:id="@+id/textView19"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Categoría"
+                android:drawableLeft="@drawable/ic_two_tone_local_offer_24px"
+                android:drawablePadding="@dimen/pLeft"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:fontFamily="@font/product_sans" />
+
+            <TextView
+                android:id="@+id/setNameCategoria"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="20dp"
+                android:paddingLeft="@dimen/pLeftSub"
+                android:text=""
+                android:textColor="@color/background"
+                android:textSize="16sp"
+                app:fontFamily="sans-serif" />
+
+            <TextView
+                android:id="@+id/textView20"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Correo Electrónico"
+                android:drawableLeft="@drawable/ic_two_tone_email_24px"
+                android:drawablePadding="@dimen/pLeft"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:fontFamily="@font/product_sans" />
+
+            <TextView
+                android:id="@+id/setEmailU"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="20dp"
+                android:paddingLeft="@dimen/pLeftSub"
+                android:text=""
+                android:textColor="@color/background"
+                android:textSize="16sp"
+                app:fontFamily="sans-serif" />
+
+            <TextView
+                android:id="@+id/textView22"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Teléfono"
+                android:drawablePadding="@dimen/pLeft"
+                android:drawableLeft="@drawable/ic_two_tone_call_24px"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:fontFamily="@font/product_sans" />
+
+            <TextView
+                android:id="@+id/setTelefono"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="20dp"
+                android:text=""
+                android:textColor="@color/background"
+                android:textSize="16sp"
+                android:paddingLeft="@dimen/pLeftSub"
+                app:fontFamily="sans-serif" />
+
+            <TextView
+                android:id="@+id/textView23"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ciudad"
+                android:drawableLeft="@drawable/ic_two_tone_room_24px"
+                android:drawablePadding="@dimen/pLeft"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:fontFamily="@font/product_sans" />
+
+            <TextView
+                android:id="@+id/txtCiudad"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="20dp"
+                android:text=""
+                android:paddingLeft="@dimen/pLeftSub"
+                android:textColor="@color/background"
+                android:textSize="16sp"
+                app:fontFamily="sans-serif" />
+
+            <TextView
+                android:id="@+id/textView25"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Localidad"
+                android:paddingLeft="35dp"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:fontFamily="@font/product_sans" />
+
+            <TextView
+                android:id="@+id/setLocalidad"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="20dp"
+                android:paddingLeft="@dimen/pLeftSub"
+                android:text=""
+                android:textColor="@color/background"
+                android:textSize="16sp"
+                app:fontFamily="sans-serif" />
+
+            <TextView
+                android:id="@+id/textView26"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Dirección"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:paddingLeft="35dp"
+                app:fontFamily="@font/product_sans" />
+
+            <TextView
+                android:id="@+id/txtDireccion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="30dp"
+                android:paddingLeft="@dimen/pLeftSub"
+                android:text=""
+                android:textColor="@color/background"
+                android:textSize="16sp"
+                app:fontFamily="sans-serif" />
+
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

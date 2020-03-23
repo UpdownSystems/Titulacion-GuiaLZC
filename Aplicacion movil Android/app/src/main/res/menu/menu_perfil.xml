@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Echo por: Updown Systems
+    Programado por: Jorge Luis Perez Medina
+-->
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:title="Restablecer contraseña"
+        android:id="@+id/fabResetPassword"
+        android:icon="@drawable/ic_lock_outline_black_24dp"
+        app:showAsAction="always"/>
+
+    <item
+        android:title="Cerrar sesion"
+        android:id="@+id/fabExitApp"
+        android:icon="@drawable/ic_exit_to_app_black_24dp"
+        app:showAsAction="always"/>
+</menu>

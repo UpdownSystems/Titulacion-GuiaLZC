@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".registroUsuario">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/heightNavbar"
+        android:padding="10dp"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingLeft="10dp"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/btn_back"
+                style="@android:style/Widget.Material.Button.Borderless"
+                android:layout_width="14dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".1" />
+
+            <ImageView
+                android:id="@+id/imageView6"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="-12dp"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="0" />
+
+            <TextView
+                android:layout_width="10dp"
+                android:layout_height="wrap_content"
+                android:paddingLeft="0dp"
+                android:layout_marginTop="5dp"
+                android:layout_weight="1"
+                android:text="Siscom bci"
+                android:textAllCaps="false"
+                android:textColor="@color/txtPrincipal"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                 />
+
+        </LinearLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/heightNavbar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clipChildren="false"
+            android:clipToPadding="false"
+            android:orientation="vertical"
+            android:padding="@dimen/mginLinearL">
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:paddingBottom="50dp"
+                android:text=""
+                android:textAlignment="center"
+                android:textColor="@color/txtPrincipal"
+                android:textSize="30dp"
+                android:textStyle="bold" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                style="@style/Widget.Shrine.TextInputLayout"
+                android:hint="Nombre Jefe">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/setNameCompletJefe"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:inputType="text"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/textView25"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="Roboto"
+                android:paddingTop="10dp"
+                android:paddingBottom="8dp"
+                android:text="Categoria"
+                android:textSize="15sp" />
+
+            <AutoCompleteTextView
+                android:id="@+id/selectCategoria"
+                style="@android:style/Widget.Material.AutoCompleteTextView"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:completionThreshold="1"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                style="@style/Widget.Shrine.TextInputLayout"
+                >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/nameNegocio"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:hint="Nombre del lugar"
+                    android:inputType="text"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                style="@style/Widget.Shrine.TextInputLayout"
+                >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/setCiudad"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:inputType="text"
+                    android:hint="Ciudad"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                style="@style/Widget.Shrine.TextInputLayout"
+                >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/setTelefono"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:inputType="text|phone"
+                    android:hint="Telefono"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                style="@style/Widget.Shrine.TextInputLayout"
+                >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/setEmailU"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:inputType="textEmailAddress"
+                    android:hint="Email"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                style="@style/Widget.Shrine.TextInputLayout"
+                app:counterEnabled="true"
+                app:errorEnabled="true"
+                app:counterMaxLength="20"
+                android:hint="@string/contrasena">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/password"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:inputType="textPassword"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                style="@style/Widget.Shrine.TextInputLayout"
+                app:errorEnabled="true"
+                app:counterEnabled="true"
+                app:counterMaxLength="20"
+                android:hint="@string/confContrasena">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/confirm_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:inputType="textPassword"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                style="@style/Widget.Shrine.TextInputLayout">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/setDireccion"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:inputType="text"
+                    android:hint="Direccion"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/textView20"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="Roboto"
+                android:paddingTop="10dp"
+                android:paddingBottom="8dp"
+                android:text="@string/localidad"
+                android:textSize="15sp" />
+
+            <AutoCompleteTextView
+                android:id="@+id/selectLocalidad"
+                style="@android:style/Widget.Material.AutoCompleteTextView"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:completionThreshold="1"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp" />
+
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/sign_up_button"
+                style="@style/Widget.Shrine.Button"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Button"
+                android:layout_width="155dp"
+                android:layout_height="45dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="35dp"
+                android:layout_marginBottom="25dp"
+                android:layout_weight="1"
+                android:text="REGISTRAR"
+                android:textAlignment="center"
+                android:typeface="normal" />
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
