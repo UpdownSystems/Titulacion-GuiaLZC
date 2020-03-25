@@ -8,9 +8,9 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:499302145560:android:1dde85dc4fe59eed062d6d",
+        "mobilesdk_app_id": "1:499302145560:android:205fba2eff251e92062d6d",
         "android_client_info": {
-          "package_name": "com.example.guiazlzc"
+          "package_name": "com.pymespace.guiazlzc"
         }
       },
       "oauth_client": [
