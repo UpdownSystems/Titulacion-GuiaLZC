@@ -58,21 +58,29 @@ firebase.auth().signInWithEmailAndPassword(email, password).then(function(result
 
           $.each(categoria, function(indice,valor)
           {
-            if(email==valor.email&&valor.Administrador==1&&valor.sesion==1)
+            if(email==valor.email)
             {
-              Solicitud("php/IniciarSesion.php", "POST", false);
-              location.href="Categorias.php";
+              if(valor.Administrador==1&&valor.sesion==1)
+              {
+                firebase.auth().signOut().then(function() {
+                  Solicitud("php/IniciarSesion.php", "POST", false);
+                location.href="Categorias.php";
+                }).catch(function(error) {
+                  // An error happened.
+                });
+              }
+              else
+              {
+                window.alert("El usuario no cuenta con privilegios suficientes");
+              }
             }
-            else
-            {
-
-            }
+            
           });
   
       },function(objetoError){
       	console.log("Error");
       });
 
-	}).catch(function(error) { });
+	}).catch(function(error) { window.alert("El usuario o la contraseña son erroneas");});
 
 }

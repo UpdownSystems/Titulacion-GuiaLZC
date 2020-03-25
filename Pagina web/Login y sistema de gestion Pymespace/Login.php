@@ -1,6 +1,6 @@
 <?php 
  //Conexion con la base de datos.
- $conexion= new mysqli("www.updownsystems.com:3306","updownsy_root", "ulises_888888");
+ $conexion= new mysqli("www.pymespace.com.mx:3306","pymespac_root", "stexfive_888888");
    
  if($conexion->connect_errno){
       echo "Fallo al conectar a MySQL:(". $conexion->connect_errno.")";
@@ -9,8 +9,8 @@
  $conexion->select_db("pymespac_Guia");
       
  //declaramos como variables a los campos de texto del formulario.
- $nombre=$_POST["usuario"];
- $password=$_POST["contraseña"];
+ $nombre='admin';
+ $password='1234';
 
  //Consulta del usuario y el password
  $consulta="SELECT usuario,password FROM usuario 
@@ -25,7 +25,7 @@
  }
  //Si no existe lo va a enviar al login otra vez.
  else if($nr <= 0) { 
-               header("Location:index.html"); 
+  header("Location:index.html"); 
  }  
  }
  else{
