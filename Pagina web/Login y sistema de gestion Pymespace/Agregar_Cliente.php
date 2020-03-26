@@ -1,3 +1,5 @@
+<!DOCTYPE html>
+
 <?php
 	session_start();
 	if(isset($_SESSION["Logueado"])){
@@ -10,7 +12,7 @@
         header("Location:Login.php");
     }
 ?>
-<!DOCTYPE html>
+
 <html lang="es">
 <head>
 	<meta charset="utf-8">
@@ -26,10 +28,11 @@
 		}
 	</style>
 <script src="https://www.gstatic.com/firebasejs/7.6.2/firebase.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-auth.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-firestore.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-database.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-database.js"></script>
 </head>
+
 <body>
 <nav class="navbar navbar-default navbar-fixed-top">
 	<div class="container">
@@ -60,9 +63,9 @@
 			<h2>Clientes &raquo; Agregar clientes</h2>
 			<hr />
 
-			<form method="#" action="#" onsubmit="registro();" class="form-horizontal">
+			<form action="#" class="form-horizontal">
 				
-			<div class="form-group">
+			  <div class="form-group">
 					<label class="col-sm-3 control-label">Nombre de la persona encargada</label>
 					<div class="col-sm-4">
 						<input type="text" id="nombreJefe" class="form-control" placeholder="Alberto" required>
@@ -127,9 +130,9 @@
 					<label class="col-sm-3 control-label">Tipo de usuario</label>
 					<div class="col-sm-4">
 						Usuario comun
-						<input type="radio" name="TipoUsuario">
+						<input type="radio" name="TipoUsuario" >
 						Adminsitrador
-						<input type="radio" name="TipoUsuario">
+						<input type="radio" name="TipoUsuario" >
 					</div>
 				</div>
 				
@@ -137,7 +140,7 @@
 				<div class="form-group">
 					<label class="col-sm-3 control-label">&nbsp;</label>
 					<div class="col-sm-6">
-						<input type="submit" class="btn btn-sm btn-primary" value="Agregar cliente">
+						<input type="submit" class="btn btn-sm btn-primary" value="Agregar cliente" onclick="registro()">
 						<a href="Clientes.php" class="btn btn-sm btn-danger">Cancelar</a>
 					</div>
 				</div>

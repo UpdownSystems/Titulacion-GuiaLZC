@@ -13,6 +13,7 @@
     firebase.initializeApp(firebaseConfig);
 
     function registro() {
+      
       var auth = firebase.auth();
       var database = firebase.database();
       var email = document.getElementById('email').value;
@@ -25,6 +26,7 @@
       var localidad=document.getElementById('localidad').value;
       var direccion=document.getElementById('direccion').value;
       var telefono=document.getElementById('telefono').value;
+      
       var Usuario = document.getElementsByName('TipoUsuario');
       var TipoUsuario;
       if(Usuario[0].checked){
@@ -43,18 +45,7 @@
   
   
       firebase.auth().createUserWithEmailAndPassword(email, password).then(function(user) {
-          
-      }).catch(function(error) {
-        var errorCode = error.code;
-        var errorMessage = error.message;
-        if (errorCode == "auth/email-already-in-use") {
-          alert("El correo ya esta en uso");
-        }
-        if (errorCode == "auth/weak-password") {
-          alert("Contraseña muy vurnerable, 6 digitos minimo!.");
-        }
-      }).then(function(user) {
-          var user = firebase.auth().getUid();
+        var user = firebase.auth().getUid();
   
           firebase.database().ref('usuarios').child(user).set({
             nombreJefe:nombre,
@@ -68,14 +59,28 @@
             Administrador:TipoUsuario,
             sesion:"1"
           });
-            
-          /*user.updateProfile({
-              displayName: nombre
-            }).then(function() {
-              alert("¡Gracias Por Registrarte!");
-            }, function(error) {
-              alert(error.message);
-            });*/
+        alert("Usuario registrado correctamente");          
+       document.getElementById('email').value="";
+       document.getElementById('password').value="";
+       document.getElementById('confpassword').value="";
+       document.getElementById('nombreJefe').value="";
+       document.getElementById('nombreNegocio').value="";
+       document.getElementById('categoria').value="";
+       document.getElementById('ciudad').value="";
+       document.getElementById('localidad').value="";
+       document.getElementById('direccion').value="";
+       document.getElementById('telefono').value="";
+      }).catch(function(error) {
+        var errorCode = error.code;
+        var errorMessage = error.message;
+        if (errorCode == "auth/email-already-in-use") {
+          alert("El correo ya esta en uso");
+        }
+        if (errorCode == "auth/weak-password") {
+          alert("Contraseña muy vurnerable, 6 digitos minimo!.");
+        }
+      }).then(function(user) {
+                    
       })
   }
   
