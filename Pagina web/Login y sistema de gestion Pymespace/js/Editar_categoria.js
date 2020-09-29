@@ -31,9 +31,10 @@ $(document).ready(function()
         var referencia=database.ref("categorias");
 
         firebase.database().ref().child('/categorias/' + id)
-        .update({ name: categoria }).then(function(){
-            location.href="Categorias.php";
+        .update({ name: categoria }).then(function(){            
         });
+        alert("Editado Correctamente");
+        window.history.go(-1)
     });
 
 });

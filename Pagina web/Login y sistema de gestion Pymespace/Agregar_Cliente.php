@@ -50,7 +50,7 @@
 					<li><a href="Categorias.php">Lista de categorias</a></li>
 					<li><a href="Clientes.php">Lista de Clientes</a></li>
 					<li><a href="Agregar_categoria.php">Agregar Categorias</a></li>
-					<li class="active"><a href="Agregar_Cliente.php">Agregar Clientes</a></li>
+					<li class="active"><a href="Agregar_Cliente.php?TipoUsuario=on#">Agregar Clientes</a></li>
 					<li><a href="Configuracion.php">Reestablecer contraseña</a></li>
 					<li><a href="php/CerrarSesion.php">Cerrar sesión</a></li>
 				</ul>
@@ -130,9 +130,9 @@
 					<label class="col-sm-3 control-label">Tipo de usuario</label>
 					<div class="col-sm-4">
 						Usuario comun
-						<input type="radio" name="TipoUsuario" >
+						<input type="radio" name="TipoUsuario">
 						Adminsitrador
-						<input type="radio" name="TipoUsuario" >
+						<input type="radio" name="TipoUsuario">
 					</div>
 				</div>
 				
@@ -140,7 +140,7 @@
 				<div class="form-group">
 					<label class="col-sm-3 control-label">&nbsp;</label>
 					<div class="col-sm-6">
-						<input type="submit" class="btn btn-sm btn-primary" value="Agregar cliente" onclick="registro()">
+						<input type="submit" class="btn btn-sm btn-primary" value="Agregar cliente" id="botonGuardar">
 						<a href="Clientes.php" class="btn btn-sm btn-danger">Cancelar</a>
 					</div>
 				</div>

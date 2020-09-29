@@ -62,6 +62,8 @@ $(document).ready(function()
             telefono:telefono,
             user:id
          });
+         alert("Editado Correctamente");
+        window.history.go(-1)
     });
 
 });

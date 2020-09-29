@@ -32,10 +32,12 @@ $(document).ready(function()
         referencia.push(
         {
          name: categoria
-        },function()
+        },
+        function()
         {
-            alert('El alta se ha realizado correctamente');
+            
         });
+        alert('El alta se ha realizado correctamente');
     });
 
 });

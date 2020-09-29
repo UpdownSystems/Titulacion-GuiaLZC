@@ -10,128 +10,84 @@
       appId: "1:499302145560:web:c590842ff00075b2062d6d",
       measurementId: "G-V0072ERKQB"
     };
+
     firebase.initializeApp(firebaseConfig);
 
-    function registro() {
-      
-      var auth = firebase.auth();
-      var database = firebase.database();
-      var email = document.getElementById('email').value;
-      var password1 = document.getElementById('password').value;
-      var password2 = document.getElementById('confpassword').value;
-      var nombre=document.getElementById('nombreJefe').value;
-      var negocio=document.getElementById('nombreNegocio').value;
-      var categoria=document.getElementById('categoria').value;
-      var ciudad=document.getElementById('ciudad').value;
-      var localidad=document.getElementById('localidad').value;
-      var direccion=document.getElementById('direccion').value;
-      var telefono=document.getElementById('telefono').value;
-      
-      var Usuario = document.getElementsByName('TipoUsuario');
-      var TipoUsuario;
-      if(Usuario[0].checked){
-        TipoUsuario = 0;
-      }else{
-        TipoUsuario = 1;
-      }
+  $("#botonGuardar").click(function()
+  {
+    var auth = firebase.auth();
+    var database = firebase.database();
+    var email = document.getElementById('email').value;
+    var password1 = document.getElementById('password').value;
+    var password2 = document.getElementById('confpassword').value;
+    var nombre=document.getElementById('nombreJefe').value;
+    var negocio=document.getElementById('nombreNegocio').value;
+    var categoria=document.getElementById('categoria').value;
+    var ciudad=document.getElementById('ciudad').value;
+    var localidad=document.getElementById('localidad').value;
+    var direccion=document.getElementById('direccion').value;
+    var telefono=document.getElementById('telefono').value;
+    
+    var Usuario = document.getElementsByName('TipoUsuario');
+    var TipoUsuario;
+    if(Usuario[0].checked){
+      TipoUsuario = 0;
+    }else{
+      TipoUsuario = 1;
+    }
 
+    if (password1 == password2) {
+      password = document.getElementById('password').value;
+    } else {
+      alert("Las contraseñas NO son iguales");
+      return 0;
+    }
+    
+    firebase.auth().createUserWithEmailAndPassword(email, password).then(function(user) {
+     var user = firebase.auth().getUid();
 
-      if (password1 == password2) {
-        password = document.getElementById('password').value;
-      } else {
-        alert("Las contraseñas NO son iguales");
-        return 0;
-      }
-  
-  
-      firebase.auth().createUserWithEmailAndPassword(email, password).then(function(user) {
-        var user = firebase.auth().getUid();
-  
-          firebase.database().ref('usuarios').child(user).set({
-            nombreJefe:nombre,
-            nombreNegocio:negocio,
-            categoria:categoria,
-            ciudad:ciudad,
-            localidad:localidad,
-            direccion:direccion,
-            telefono:telefono,
-            email: email,
-            Administrador:TipoUsuario,
-            sesion:"1"
-          });
-        alert("Usuario registrado correctamente");          
-       document.getElementById('email').value="";
-       document.getElementById('password').value="";
-       document.getElementById('confpassword').value="";
-       document.getElementById('nombreJefe').value="";
-       document.getElementById('nombreNegocio').value="";
-       document.getElementById('categoria').value="";
-       document.getElementById('ciudad').value="";
-       document.getElementById('localidad').value="";
-       document.getElementById('direccion').value="";
-       document.getElementById('telefono').value="";
-      }).catch(function(error) {
-        var errorCode = error.code;
-        var errorMessage = error.message;
-        if (errorCode == "auth/email-already-in-use") {
-          alert("El correo ya esta en uso");
-        }
-        if (errorCode == "auth/weak-password") {
-          alert("Contraseña muy vurnerable, 6 digitos minimo!.");
-        }
-      }).then(function(user) {
-                    
-      })
-  }
-  
-  function ingresar() {
-    var email = document.getElementById('correo').value;
-    var password = document.getElementById('contrasena').value;
-  
-    firebase.auth().signInWithEmailAndPassword(email, password)
-        .then(function (response) {
-          console.log("Logueado correctamente");
-        })
-        .catch(function (error) {
-          console.log("No Logueado correctamente");
-    });
-  }
-  
-  function datosMostrar(){
-    var info = document.getElementById('main');
-    //info.innerHTML = '<button class="btn btn-danger" onclick="cerrarSesion()">Cerrar sesion</button>';
-  }
-  
-  function cerrarSesion() {
-    firebase.auth().signOut()
-        .then(function () {
-            console.log("Cerraste sesion correctamente");
-        }).catch(function (error) {
-            // An error happened.
+        firebase.database().ref('usuarios').child(user).set({
+          nombreJefe:nombre,
+          nombreNegocio:negocio,
+          categoria:categoria,
+          ciudad:ciudad,
+          localidad:localidad,
+          direccion:direccion,
+          telefono:telefono,
+          email: email,
+          Administrador:TipoUsuario,
+          sesion:"1"
         });
-  }
-  
-  function observador(){
-    firebase.auth().onAuthStateChanged(function (user) {
-      var info = document.getElementById('main');
-  
-        if (user) {
-          var email = user.email;
-          var uid = user.uid;
-          console.log(uid);
-          console.log("hay usuarios autenticados");
-          //datosMostrar();
-        } else {
-          console.log("No hay usuarios autenticados");
-        }
-    });
-  }
-  
-  
-  observador();
 
+     alert("Usuario registrado correctamente");          
+     document.getElementById('email').value="";
+     document.getElementById('password').value="";
+     document.getElementById('confpassword').value="";
+     document.getElementById('nombreJefe').value="";
+     document.getElementById('nombreNegocio').value="";
+     document.getElementById('categoria').value="";
+     document.getElementById('ciudad').value="";
+     document.getElementById('localidad').value="";
+     document.getElementById('direccion').value="";
+     document.getElementById('telefono').value="";
 
+     window.locationf="http://localhost/pymespace/Agregar_Cliente.php";
 
+      
+    }).catch(function(error) {
+      var errorCode = error.code;
+      var errorMessage = error.message;
+      if (errorCode == "auth/email-already-in-use") {
+        alert("El correo ya esta en uso");
+      }
+      if (errorCode == "auth/weak-password") {
+        alert("Contraseña muy vurnerable, 6 digitos minimo!.");
+      }
+    }).then(function(user) {
+                  
+    })
+  });
+ 
 function MantenerSesion() {
     try{
         Interv = setInterval(function(){

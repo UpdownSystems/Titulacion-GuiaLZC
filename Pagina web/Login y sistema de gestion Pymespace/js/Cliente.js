@@ -61,7 +61,7 @@ $(document).ready(function()
                 }else{
                     cat+='<button data="' + indice + '@0' + '" href="Clientes.php?aksi=delete&nik='+indice+'" title="Habilitar" class="btn btn-primary btn-sm"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span></button>';
                 }
-                cat+='<button data="1" class="btn btn-danger btn-sm" href="Editar_clientes.php?id='+indice+'&nombre='+valor.nombreJefe+'&negocio='+valor.nombreNegocio+'&ciudad='+valor.ciudad+'&localidad='+valor.localidad+'&direccion='+valor.direccion+'&telefono='+valor.telefono+'&email='+valor.email+'&categoria='+valor.categoria+'" title="Editar"><i class="glyphicon glyphicon-pencil" aria-hidden="true"></i></button>';
+                cat+='<a class="btn btn-primary btn-sm" href="Editar_clientes.php?id='+indice+'&nombre='+valor.nombreJefe+'&negocio='+valor.nombreNegocio+'&ciudad='+valor.ciudad+'&localidad='+valor.localidad+'&direccion='+valor.direccion+'&telefono='+valor.telefono+'&email='+valor.email+'&categoria='+valor.categoria+'" title="Editar"><i class="glyphicon glyphicon-pencil" aria-hidden="true"></i></a>';
 
                 cat+='</td>';
                 cat+='</tr>';

@@ -53,7 +53,7 @@ $categoria = $_GET['categoria'];
 					<li><a href="Categorias.php">Lista de categorias</a></li>
 					<li><a href="Clientes.php">Lista de Clientes</a></li>
 					<li><a href="Agregar_categoria.php">Agregar Categorias</a></li>
-					<li><a href="Agregar_Cliente.php">Agregar Clientes</a></li>
+					<li><a href="Agregar_Cliente.php?TipoUsuario=on#">Agregar Clientes</a></li>
 					<li><a href="Configuracion.php">Reestablecer contraseña</a></li>
 					<li><a href="php/CerrarSesion.php">Cerrar sesión</a></li>
 				</ul>

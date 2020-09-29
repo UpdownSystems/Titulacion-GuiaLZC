@@ -46,7 +46,7 @@ $categoria = $_GET['cat'];
 					<li><a href="Categorias.php">Lista de categorias</a></li>
 					<li><a href="Clientes.php">Lista de Clientes</a></li>
 					<li><a href="Agregar_categoria.php">Agregar Categorias</a></li>
-					<li><a href="Agregar_Cliente.php">Agregar Clientes</a></li>
+					<li><a href="Agregar_Cliente.php?TipoUsuario=on#">Agregar Clientes</a></li>
 					<li><a href="Configuracion.php">Reestablecer contraseña</a></li>
 					<li><a href="php/CerrarSesion.php">Cerrar sesión</a></li>
 				</ul>
@@ -74,7 +74,7 @@ $categoria = $_GET['cat'];
 				<div class="form-group">
 					<label class="col-sm-3 control-label">&nbsp;</label>
 					<div class="col-sm-6">
-						<input type="submit" id="botonGuardar" class="btn btn-sm btn-primary" value="Editar categoria" >
+						<input type="submit" id="botonGuardar" class="btn btn-sm btn-primary" value="Editar categoria">
 						<a href="Categorias.php" class="btn btn-sm btn-danger">Cancelar</a>
 					</div>
 				</div>
