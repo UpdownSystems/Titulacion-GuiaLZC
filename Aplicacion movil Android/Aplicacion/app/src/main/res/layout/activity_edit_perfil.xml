@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Echo por: Updown Systems
+    Programado por: Jorge Luis Perez Medina
+-->
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:background="#fff"
+    android:id="@+id/coordinatorLayout"
+xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+<!-- Toolbar  -->
+<include
+    layout="@layout/toolbar_perfil"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" />
+
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/heightNavbar">
+
+    <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingRight="25dp"
+    android:paddingLeft="25dp"
+    android:paddingTop="10dp"
+    android:layout_marginBottom="90dp"
+    android:orientation="vertical">
+
+        <!-- Nombre Encargado -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/fieldNombreEncargadoInput"
+            style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+            app:boxCornerRadiusTopStart="5dp"
+            app:boxCornerRadiusTopEnd="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:errorEnabled="true"
+            android:layout_weight="1">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/fieldNombreEncargado"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/ic_two_tone_account_circle_24px"
+                android:drawablePadding="10dp"
+                android:inputType="text"
+                android:maxLines="2" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Nombre Negocio- -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/fieldNegocioInput"
+            style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+            app:boxCornerRadiusTopStart="5dp"
+            app:boxCornerRadiusTopEnd="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:errorEnabled="true"
+            android:layout_weight="1">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/fieldNegocio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/ic_two_tone_store_mall_directory_24px"
+                android:drawablePadding="10dp"
+                android:inputType="text"
+                android:maxLines="1" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Categoria -->
+        <AutoCompleteTextView
+            android:id="@+id/fieldCategoria"
+            style="@android:style/Widget.Material.AutoCompleteTextView"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:completionThreshold="1"
+            android:padding="12dp"
+            android:drawableLeft="@drawable/ic_two_tone_local_offer_24px"
+            android:drawablePadding="10dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="15dp"
+            android:layout_weight="1"/>
+
+        <!-- Email -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/fieldEmailInput"
+            style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+            app:boxCornerRadiusTopStart="5dp"
+            app:boxCornerRadiusTopEnd="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:errorEnabled="true"
+            android:layout_weight="1">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/fieldEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textEmailAddress"
+                android:drawableLeft="@drawable/ic_two_tone_email_24px"
+                android:drawablePadding="10dp"
+                android:maxLines="1"
+                android:enabled="false"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Phone- -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/fieldTelefonoInput"
+            style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+            app:boxCornerRadiusTopStart="5dp"
+            app:boxCornerRadiusTopEnd="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:errorEnabled="true"
+            android:layout_weight="1">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/fieldTelefono"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/ic_two_tone_call_24px"
+                android:drawablePadding="10dp"
+                android:inputType="phone"
+                android:maxLines="1" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Ciudad -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/fieldCiudadInput"
+            style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+            app:boxCornerRadiusTopStart="5dp"
+            app:boxCornerRadiusTopEnd="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:errorEnabled="true"
+            android:layout_weight="1">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/fieldCiudad"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:drawableLeft="@drawable/ic_two_tone_room_24px"
+                android:drawablePadding="10dp"
+                android:maxLines="5" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Localidad -->
+        <AutoCompleteTextView
+            android:id="@+id/fieldLocalidad"
+            style="@android:style/Widget.Material.AutoCompleteTextView"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:completionThreshold="1"
+            android:padding="10dp"
+            android:drawablePadding="10dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="15dp"
+            android:layout_weight="1"/>
+
+        <!-- Direccion -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/fieldDireccionInput"
+            style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+            app:boxCornerRadiusTopStart="5dp"
+            app:boxCornerRadiusTopEnd="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:errorEnabled="true"
+            android:layout_weight="1">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/fieldDireccion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:drawablePadding="10dp"
+                android:maxLines="2" />
+        </com.google.android.material.textfield.TextInputLayout>
+    </LinearLayout>
+
+</ScrollView>
+
+    </RelativeLayout>
+<com.google.android.material.floatingactionbutton.FloatingActionButton
+    android:id="@+id/fabSubmitEditPerfil"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="end|bottom"
+    android:layout_margin="16dp"
+    android:src="@drawable/ic_check_white_24dp"/>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
